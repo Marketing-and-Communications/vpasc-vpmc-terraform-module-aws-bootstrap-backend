@@ -1,3 +1,8 @@
+variable "allow_bucket_force_destroy" {
+  type        = bool
+  description = "Allow buckets to be destroyed when doing a terraform destroy"
+  default     = false
+}
 variable "aws_profile_name" {
   type        = string
   description = "The AWS profile name used to authenticate"
