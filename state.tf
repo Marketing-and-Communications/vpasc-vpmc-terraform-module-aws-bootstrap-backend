@@ -3,10 +3,10 @@ resource "aws_s3_bucket" "tf_state_bucket" {
   force_destroy = var.allow_bucket_force_destroy
 }
 
-resource "aws_s3_bucket_acl" "tf_state_bucket_acl" {
-  bucket = aws_s3_bucket.tf_state_bucket.id
-  acl    = "private"
-}
+#resource "aws_s3_bucket_acl" "tf_state_bucket_acl" {
+#  bucket = aws_s3_bucket.tf_state_bucket.id
+#  acl    = "private"
+#}
 
 resource "aws_s3_bucket_public_access_block" "tf_state_bucket_block" {
   bucket = aws_s3_bucket.tf_state_bucket.id
